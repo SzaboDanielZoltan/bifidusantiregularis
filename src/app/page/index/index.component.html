@@ -1,8 +1,30 @@
-<p>index works!</p>
-
-
-
-
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+          <div class="card text-white bg-primary">
+            <div class="card-body">
+                <div class="card-body-icon">
+                    <i class="fa fa-comments"></i>
+                  </div>
+                <div class="mr-10">
+                    {{ employeesNumber }} New Employees!</div>
+            </div>
+            <a class="card-footer text-white" href="#">
+              <span class="float-left" routerLink="employee">View Details</span>
+            </a>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card text-white bg-warning ">
+            <div class="card-body">
+                <div class="mr-10">{{billsNumber}} New Bills!</div>
+            </div>
+            <a class="card-footer text-white" href="#">
+              <span class="float-left" routerLink="">View Details</span>
+            </a>
+          </div>
+        </div>
+</div>
 <!-- 
 <button (click)="showModal()" class="btn btn-primary btn-lg">Show Modal Window</button>
 <app-modal [showCounter]="modalCounter"></app-modal>
