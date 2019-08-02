@@ -13,8 +13,19 @@ export class BillComponent implements OnInit {
   data = new MockData();
   bills: Bill[] = this.data.bills;
 
-  clgBills() {
-    console.log(this.bills);
+  bill: object;
+  chosenId: string;
+
+
+  modalCounter: number = 0;
+  showModal() {
+    this.modalCounter = 1;
+    this.chosenId = event.target.parentElement.parentElement.children[0].children[0].value;
+    this.bill = this.bills.filter(bill => bill._id === this.chosenId)[0];
+  }
+
+  changeCounter(zero: number) {
+    this.modalCounter = zero;
   }
 
   constructor() { }

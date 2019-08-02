@@ -13,21 +13,24 @@
   <tbody>
     <tr *ngFor="let bill of bills">
       <td><input type="text"
-               [(ngModel)]="bill._id"
-               (change)="clgBills()"></td>
+               [(ngModel)]="bill._id"></td>
       <td><input type="checkbox"
-               [(ngModel)]="bill.paid"
-               (change)="clgBills()"></td>
+               [(ngModel)]="bill.paid"></td>
       <!--<td>{{ bill.paid }}</td>-->
       <td><input type="text"
-               [(ngModel)]="bill.amount"
-               (change)="clgBills()"></td>
+               [(ngModel)]="bill.amount"></td>
       <td><input type="text"
-               [(ngModel)]="bill.customer"
-               (change)="clgBills()"></td>
+               [(ngModel)]="bill.customer"></td>
       <td><input type="text"
-               [(ngModel)]="bill.created"
-               (change)="clgBills()"></td>
+               [(ngModel)]="bill.created"></td>
+      <td>
+        <button (click)="showModal()"
+                class="btn btn-primary btn-lg">Show</button>
+      </td>
     </tr>
   </tbody>
 </table>
+
+<app-modal [showCounter]="modalCounter"
+           [modalData]="bill"
+           (changeCounter)="changeCounter($event)"></app-modal>
