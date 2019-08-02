@@ -1,42 +1,43 @@
 <h1>{{ title }} <i class="fa fa-money"
-     aria-hidden="true"></i></h1>
+        aria-hidden="true"></i></h1>
 
 
 <table class="table table-striped">
-  <thead>
-    <tr>
-      <th>ID <i class="fa fa-id-card"
-           aria-hidden="true"></i></th>
-      <th>Paid <i class="fa fa-credit-card"
-           aria-hidden="true"></i></th>
-      <th>Amount <i class="fa fa-money"
-           aria-hidden="true"></i></th>
-      <th>Customer <i class="fa fa-id-badge"
-           aria-hidden="true"></i></th>
-      <th>Created <i class="fa fa-calendar"
-           aria-hidden="true"></i></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let bill of bills">
-      <td><input type="text"
-               [(ngModel)]="bill._id"></td>
-      <td><input type="checkbox"
-               [(ngModel)]="bill.paid"></td>
-      <td><input type="text"
-               [(ngModel)]="bill.amount"></td>
-      <td><input type="text"
-               [(ngModel)]="bill.customer"></td>
-      <td><input type="text"
-               [(ngModel)]="bill.created"></td>
-      <td>
-        <button (click)="showModal()"
-                class="btn btn-primary btn-lg">Show <i class="fa fa-list"
-             aria-hidden="true"></i></button>
-      </td>
-    </tr>
-  </tbody>
+     <thead>
+          <tr>
+               <th>ID <i class="fa fa-id-card"
+                       aria-hidden="true"></i></th>
+               <th>Paid <i class="fa fa-credit-card"
+                       aria-hidden="true"></i></th>
+               <th>Amount <i class="fa fa-money"
+                       aria-hidden="true"></i></th>
+               <th>Customer <i class="fa fa-id-badge"
+                       aria-hidden="true"></i></th>
+               <th>Created <i class="fa fa-calendar"
+                       aria-hidden="true"></i></th>
+               <th></th>
+          </tr>
+     </thead>
+     <tbody>
+          <tr *ngFor="let bill of bills">
+               <td><input type="text"
+                           [(ngModel)]="bill._id"></td>
+               <td><input type="checkbox"
+                           [(ngModel)]="bill.paid"></td>
+               <td><input type="text"
+                           [(ngModel)]="bill.amount"></td>
+               <td><input type="text"
+                           [(ngModel)]="bill.customer"></td>
+               <td><input type="text"
+                           [(ngModel)]="bill.created"></td>
+               <td>
+                    <button (click)="showModal($event)"
+                            class="btn btn-primary btn-lg"
+                            [id]="bill._id">Show <i class="fa fa-list"
+                            aria-hidden="true"></i></button>
+               </td>
+          </tr>
+     </tbody>
 </table>
 
 <app-modal [showCounter]="modalCounter"

@@ -18,9 +18,10 @@ export class BillComponent implements OnInit {
 
 
   modalCounter: number = 0;
-  showModal() {
+  showModal(event) {
     this.modalCounter = 1;
-    this.chosenId = event.target.parentElement.parentElement.children[0].children[0].value;
+    console.log(event.target);
+    this.chosenId = event.target.id;
     this.bill = this.bills.filter(bill => bill._id === this.chosenId)[0];
   }
 
