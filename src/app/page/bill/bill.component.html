@@ -1,13 +1,21 @@
-<h1>{{ title }}</h1>
+<h1>{{ title }} <i class="fa fa-money"
+     aria-hidden="true"></i></h1>
+
 
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>ID</th>
-      <th>Paid</th>
-      <th>Amount</th>
-      <th>Customer</th>
-      <th>Created</th>
+      <th>ID <i class="fa fa-id-card"
+           aria-hidden="true"></i></th>
+      <th>Paid <i class="fa fa-credit-card"
+           aria-hidden="true"></i></th>
+      <th>Amount <i class="fa fa-money"
+           aria-hidden="true"></i></th>
+      <th>Customer <i class="fa fa-id-badge"
+           aria-hidden="true"></i></th>
+      <th>Created <i class="fa fa-calendar"
+           aria-hidden="true"></i></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -16,7 +24,6 @@
                [(ngModel)]="bill._id"></td>
       <td><input type="checkbox"
                [(ngModel)]="bill.paid"></td>
-      <!--<td>{{ bill.paid }}</td>-->
       <td><input type="text"
                [(ngModel)]="bill.amount"></td>
       <td><input type="text"
@@ -25,7 +32,8 @@
                [(ngModel)]="bill.created"></td>
       <td>
         <button (click)="showModal()"
-                class="btn btn-primary btn-lg">Show</button>
+                class="btn btn-primary btn-lg">Show <i class="fa fa-list"
+             aria-hidden="true"></i></button>
       </td>
     </tr>
   </tbody>
