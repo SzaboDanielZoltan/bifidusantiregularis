@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MockData} from 'src/app/model/mock-data';
 
 @Component({
   selector: 'app-index',
@@ -6,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
+
+  dataEmployee=new MockData();
+  employeesNumber:number=this.dataEmployee.employee.length;
+  billsNumber:number=this.dataEmployee.bills.length;
+  
 
   modalCounter: number = 0;
 
