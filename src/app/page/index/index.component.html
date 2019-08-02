@@ -1,30 +1,75 @@
 <div class="container">
     <div class="row">
-        <div class="col-6">
+        <div class=" col shadow p-3 mb-5 bg-white rounded mr-5">
           <div class="card text-white bg-primary">
             <div class="card-body">
                 <div class="card-body-icon">
-                    <i class="fa fa-comments"></i>
+                    <i class="fa fa-4x  fa-comments"></i>
                   </div>
                 <div class="mr-10">
                     {{ employeesNumber }} New Employees!</div>
             </div>
-            <a class="card-footer text-white" href="#">
-              <span class="float-left" routerLink="employee">View Details</span>
+            <a class="card-footer text-white" routerLink="/employee">
+              <span class="float-left" >View Details</span>
+              <span class="float-right">
+                  <i class=" fa fa-angle-right"></i>
+                </span>
             </a>
           </div>
         </div>
-        <div class="col-6">
+        <div class=" col shadow p-3 mb-5 bg-white rounded mr-5">
           <div class="card text-white bg-warning ">
             <div class="card-body">
+                <div class="card-body-icon">
+                    <i class=" fa fa-4x  fa-list"></i>
+                  </div>
                 <div class="mr-10">{{billsNumber}} New Bills!</div>
             </div>
-            <a class="card-footer text-white" href="#">
+            <a class="card-footer text-white"  routerLink="/bill">
               <span class="float-left" routerLink="">View Details</span>
+              <span class="float-right">
+                  <i class=" fa  fa-angle-right"></i>
+                </span>
             </a>
           </div>
         </div>
+      <div class=" col shadow p-3 mb-5 bg-white rounded mr-5">
+      <div class="card text-white bg-success ">
+        <div class="card-body">
+          <div class="card-body-icon">
+            <i class=" fa fa-4x fa-shopping-cart"></i>
+          </div>
+          <div class="mr-10">123 New Orders!</div>
+        </div>
+        <a class="card-footer text-white ">
+          <span class="float-left">View Details</span>
+          <span class="float-right">
+            <i class=" fa fa-angle-right"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class=" col shadow p-3 mb-5 bg-white rounded mr-5">
+      <div class="card text-white bg-danger ">
+        <div class="card-body">
+          <div class="card-body-icon">
+            <i class="fa fa-4x fa-life-ring"></i>
+          </div>
+          <div class="mr-10">13 New Tickets!</div>
+        </div>
+        <a class="card-footer text-white ">
+          <span class="float-left">View Details</span>
+          <span class="float-right">
+            <i class="fa fa-angle-right"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
+
+
+
 <!-- 
 <button (click)="showModal()" class="btn btn-primary btn-lg">Show Modal Window</button>
 <app-modal [showCounter]="modalCounter"></app-modal>
