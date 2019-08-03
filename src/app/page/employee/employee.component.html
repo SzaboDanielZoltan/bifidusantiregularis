@@ -36,8 +36,6 @@
           <td><input type="text" [(ngModel)]="employee.address"></td>
           <td><input type="text" [(ngModel)]="employee.registered"></td>
           <td><button (click)="showModal($event)" class="btn btn-light" [id]="employee._id">Show</button>
-            <app-modal [showCounter]="modalCounter" [modalData]="employee">
-            </app-modal>
           </td>
         </tr>
 
@@ -45,3 +43,6 @@
     </table>
   </div>
 </main>
+
+<app-modal [showCounter]="modalCounter" [modalData]="employee">
+</app-modal>
