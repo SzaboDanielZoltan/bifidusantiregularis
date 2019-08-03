@@ -16,14 +16,12 @@ export class EmployeeComponent implements OnInit {
   button: any;
   buttonId: any;
   modalCounter: number = 0;
-
   showModal(event) {
     this.modalCounter++;
     this.button = event.target;
     this.buttonId = this.button.id;
     console.log(this.buttonId);
     this.employee = this.employees.filter(employee => employee._id === this.buttonId)[0]
-    this.employee.name = this.employee.name.first + ' ' + this.employee.name.last;
   }
 
   constructor() { }

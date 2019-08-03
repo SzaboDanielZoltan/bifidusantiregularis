@@ -24,7 +24,11 @@ export class ModalComponent implements OnInit {
     console.log(counter);
     if (counter > 0) {
       for (let k in this.modalData) {
-        this.string += `<p>${k}: ${this.modalData[k]}</p>`
+        if (typeof this.modalData[k] == 'object') {
+          this.string += `<p>${k}: ${this.modalData[k].first} ${this.modalData[k].last}</p>`
+        } else {
+          this.string += `<p>${k}: ${this.modalData[k]}</p>`
+        }
       }
       this.show();
     }
